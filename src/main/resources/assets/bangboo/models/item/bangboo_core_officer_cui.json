@@ -1,0 +1,6 @@
+{
+    "parent": "item/generated",
+    "textures": {
+        "layer0": "bangboo:item/bangboo_core_officer_cui"
+    }
+}
