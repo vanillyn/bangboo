@@ -1,5 +1,6 @@
 package world.vanillyn;
 
+import io.wispforest.owo.client.screens.OwoScreenHandler;
 import io.wispforest.owo.registration.reflect.FieldRegistrationHandler;
 import net.fabricmc.api.ModInitializer;
 import net.minecraft.util.Identifier;
@@ -20,7 +21,7 @@ public class BangbooMod implements ModInitializer {
 		FieldRegistrationHandler.register(BangbooItems.class, MOD_ID, false);
 		BangbooEntities.initialize();
 		CoolingComponent.init();
-
+        OwoScreenHandler
 	}
 	public static Identifier id(String path) {
 		return Identifier.of(MOD_ID, path);

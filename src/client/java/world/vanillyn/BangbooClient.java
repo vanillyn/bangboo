@@ -3,11 +3,10 @@ package world.vanillyn;
 import net.fabricmc.api.ClientModInitializer;
 import net.fabricmc.api.EnvType;
 import net.fabricmc.api.Environment;
-import net.fabricmc.fabric.api.client.rendering.v1.EntityRendererRegistry;
 import net.fabricmc.fabric.api.client.rendering.v1.EntityModelLayerRegistry;
+import net.fabricmc.fabric.api.client.rendering.v1.EntityRendererRegistry;
 import net.fabricmc.fabric.api.object.builder.v1.entity.FabricDefaultAttributeRegistry;
 import net.minecraft.client.render.entity.model.EntityModelLayer;
-
 import world.vanillyn.entity.Bangboo.*;
 import world.vanillyn.render.Model.Bangboo.BangbooModel;
 import world.vanillyn.render.Renderer.BangbooRenderer;
@@ -21,6 +20,7 @@ public class BangbooClient implements ClientModInitializer {
 
 	@Override
 	public void onInitializeClient() {
+
 		EntityModelLayerRegistry.registerModelLayer(MODEL_BANGBOO_LAYER, BangbooModel::getTexturedModelData);
 
 		FabricDefaultAttributeRegistry.register(BANGBOO_BLANKBOO, Bangboo.createMobAttributes());
