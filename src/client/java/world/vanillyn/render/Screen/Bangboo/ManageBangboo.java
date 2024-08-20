@@ -12,7 +12,7 @@ public class ManageBangboo extends BaseUIModelScreen<FlowLayout> {
 
     @Override
     protected void build(FlowLayout rootComponent) {
-        rootComponent.childById(ButtonComponent.class, "test_button").onPress(button -> {
+        rootComponent.childById(ButtonComponent.class, "Remove Bangboo!").onPress(button -> {
             System.out.println("click");
         });
     }
