@@ -7,6 +7,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import world.vanillyn.entity.BangbooEntities;
 import world.vanillyn.items.BangbooItems;
+import world.vanillyn.items.Components.CoolingComponent;
 
 public class BangbooMod implements ModInitializer {
 	public static final String MOD_ID = "bangboo";
@@ -18,6 +19,7 @@ public class BangbooMod implements ModInitializer {
 		LOGGER.info("Ehen nene nu-nah! (Bangboo mod initialized!)");
 		FieldRegistrationHandler.register(BangbooItems.class, MOD_ID, false);
 		BangbooEntities.initialize();
+		CoolingComponent.init();
 
 	}
 	public static Identifier id(String path) {

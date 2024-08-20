@@ -18,6 +18,7 @@ import org.jetbrains.annotations.Nullable;
 import world.vanillyn.BangbooMod;
 import world.vanillyn.items.BangbooItems;
 
+
 public class Bangboo extends TameableEntity {
 
     public Bangboo(EntityType<? extends TameableEntity> entityType, World world) {
@@ -27,8 +28,9 @@ public class Bangboo extends TameableEntity {
     public ActionResult handleInteractMob(PlayerEntity player, Hand hand, ItemStack itemStack) {
         if (!this.getWorld().isClient) {
             if (player.isSneaking()) {
+                
                 if (!player.getInventory().insertStack(itemStack)) {
-                    player.dropItem(itemStack, false);
+                    player.dropItem(itemStack, true);
                 }
                 this.getWorld().playSound(null, BlockPos.ofFloored(this.getPos()), SoundEvents.ENTITY_ITEM_PICKUP, SoundCategory.BLOCKS, 1.0F, 1.0F);
                 this.remove(RemovalReason.DISCARDED);
