@@ -6,13 +6,9 @@ import net.minecraft.entity.passive.TameableEntity;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.ItemStack;
 import net.minecraft.server.world.ServerWorld;
-import net.minecraft.sound.SoundCategory;
-import net.minecraft.sound.SoundEvents;
-import net.minecraft.text.Text;
 import net.minecraft.util.ActionResult;
 import net.minecraft.util.Hand;
 import net.minecraft.util.Identifier;
-import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
 import org.jetbrains.annotations.Nullable;
 import world.vanillyn.BangbooMod;
@@ -25,17 +21,10 @@ public class Bangboo extends TameableEntity {
         super(entityType, world);
     }
 
+    public String[] bangbooId = {"amillion", "avocaboo", "bagboo", "blankboo", "boolseye", "butler", "cryboo", "devilboo", "electroboo", "luckyboo", "magnetiboo", "officer_cui", "paperboo", "penguinboo", "plugboo", "safety", "sharkboo", "sumoboo"};
     public ActionResult handleInteractMob(PlayerEntity player, Hand hand, ItemStack itemStack) {
         if (!this.getWorld().isClient) {
-            if (player.isSneaking()) {
-                
-                if (!player.getInventory().insertStack(itemStack)) {
-                    player.dropItem(itemStack, true);
-                }
-                this.getWorld().playSound(null, BlockPos.ofFloored(this.getPos()), SoundEvents.ENTITY_ITEM_PICKUP, SoundCategory.BLOCKS, 1.0F, 1.0F);
-                this.remove(RemovalReason.DISCARDED);
-                 return ActionResult.SUCCESS;
-                }
+            System.out.println("Interacted with " + this.getType().getName().getString());
         }
         return ActionResult.PASS;
     }
@@ -48,7 +37,6 @@ public class Bangboo extends TameableEntity {
 
     @Override
     public ActionResult interactMob(PlayerEntity player, Hand hand) {
-        player.sendMessage(Text.literal("En-nhu na nhene hun nhue! (I'm a prototype Bangboo!)"));
         return this.handleInteractMob(player, hand, new ItemStack(BangbooItems.BANGBOO_CORE));
     }
 
