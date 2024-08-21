@@ -8,6 +8,8 @@ import net.fabricmc.fabric.api.client.rendering.v1.EntityModelLayerRegistry;
 import net.fabricmc.fabric.api.client.rendering.v1.EntityRendererRegistry;
 import net.fabricmc.fabric.api.event.player.UseEntityCallback;
 import net.fabricmc.fabric.api.object.builder.v1.entity.FabricDefaultAttributeRegistry;
+import net.minecraft.client.MinecraftClient;
+import net.minecraft.client.font.TextRenderer;
 import net.minecraft.client.option.KeyBinding;
 import net.minecraft.client.render.entity.model.EntityModelLayer;
 import net.minecraft.client.util.InputUtil;
@@ -30,7 +32,7 @@ public class BangbooClient implements ClientModInitializer {
 
 	@Override
 	public void onInitializeClient() {
-		new TestScreen();
+
 
 		EntityModelLayerRegistry.registerModelLayer(MODEL_BANGBOO_LAYER, BangbooModel::getTexturedModelData);
 
@@ -95,7 +97,6 @@ public class BangbooClient implements ClientModInitializer {
 		FabricDefaultAttributeRegistry.register(BANGBOO_SUMOBOO, Sumoboo.createMobAttributes());
 		EntityRendererRegistry.register(BANGBOO_SUMOBOO, BangbooRenderer::new);
 
-		//this is ugly lol
 		OpenMenu = KeyBindingHelper.registerKeyBinding(new KeyBinding(
 				"key.Bangoo.openscreen",
 				InputUtil.Type.KEYSYM,
