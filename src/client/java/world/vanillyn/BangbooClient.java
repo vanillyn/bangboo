@@ -95,6 +95,7 @@ public class BangbooClient implements ClientModInitializer {
 		FabricDefaultAttributeRegistry.register(BANGBOO_SUMOBOO, Sumoboo.createMobAttributes());
 		EntityRendererRegistry.register(BANGBOO_SUMOBOO, BangbooRenderer::new);
 
+		//this is ugly lol
 		OpenMenu = KeyBindingHelper.registerKeyBinding(new KeyBinding(
 				"key.Bangoo.openscreen",
 				InputUtil.Type.KEYSYM,
