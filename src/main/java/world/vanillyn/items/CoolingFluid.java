@@ -2,7 +2,7 @@ package world.vanillyn.items;
 
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
-import world.vanillyn.items.Components.CoolingComponent;
+import world.vanillyn.data.items.RatingComponent;
 
 public class CoolingFluid extends Item {
     public CoolingFluid(Settings settings) {
@@ -10,6 +10,6 @@ public class CoolingFluid extends Item {
     }
 
     public static void getRating(ItemStack stack) {
-        int Rating = stack.get(CoolingComponent.RATING);
+        int Rating = stack.get(RatingComponent.RATING);
     }
 }

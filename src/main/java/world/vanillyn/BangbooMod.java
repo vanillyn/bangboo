@@ -5,9 +5,9 @@ import net.fabricmc.api.ModInitializer;
 import net.minecraft.util.Identifier;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import world.vanillyn.data.items.RatingComponent;
 import world.vanillyn.entity.BangbooEntities;
 import world.vanillyn.items.BangbooItems;
-import world.vanillyn.items.Components.CoolingComponent;
 import world.vanillyn.net.ScreenChannel;
 
 import static world.vanillyn.net.ScreenChannel.SCREEN_CHANNEL;
@@ -22,7 +22,7 @@ public class BangbooMod implements ModInitializer {
 		LOGGER.info("Ehen nene nu-nah! (Bangboo mod initialized!)");
 		FieldRegistrationHandler.register(BangbooItems.class, MOD_ID, false);
 		BangbooEntities.initialize();
-		CoolingComponent.init();
+		RatingComponent.init();
 		SCREEN_CHANNEL.registerClientbound(ScreenChannel.ScreenPacket.class, (message, access) -> {
 
 		});

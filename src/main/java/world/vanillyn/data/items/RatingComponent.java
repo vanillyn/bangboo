@@ -1,4 +1,4 @@
-package world.vanillyn.items.Components;
+package world.vanillyn.data.items;
 
 
 import com.mojang.serialization.Codec;
@@ -7,7 +7,7 @@ import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
 import world.vanillyn.BangbooMod;
 
-public class CoolingComponent {
+public class RatingComponent {
     public static final ComponentType<Integer> RATING = Registry.register(
             Registries.DATA_COMPONENT_TYPE,
             BangbooMod.id("fluid_rating"),
