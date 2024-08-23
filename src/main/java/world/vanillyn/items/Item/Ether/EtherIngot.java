@@ -1,4 +1,9 @@
 package world.vanillyn.items.Item.Ether;
 
-public class EtherIngot {
+import net.minecraft.item.Item;
+
+public class EtherIngot extends Item {
+    public EtherIngot(Settings settings) {
+        super(settings);
+    }
 }

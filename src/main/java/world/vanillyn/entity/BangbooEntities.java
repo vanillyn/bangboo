@@ -2,7 +2,6 @@ package world.vanillyn.entity;
 
 import net.minecraft.entity.EntityType;
 import net.minecraft.entity.SpawnGroup;
-
 import net.minecraft.entity.ai.goal.Goal;
 import net.minecraft.entity.mob.MobEntity;
 import net.minecraft.entity.player.PlayerEntity;
@@ -198,7 +197,7 @@ public class BangbooEntities {
         }
     }
 
-    public static void initialize() {
+    public static void init() {
         LOGGER.info("Ehen mononuh nu-nah! (Mobs initialized!)");
     }
 

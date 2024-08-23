@@ -1,5 +1,15 @@
 {
   "item_group.bangboo": "Bangboo",
+  "item.bangboo.ether_electrolyte": "Ether Electrolyte",
+  "item.bangboo.energy_transfer_fluid": "Energy Transfer Fluid",
+  "item.bangboo.concentrated_cooling_fluid": "Concentrated Cooling Fluid",
+  "item.bangboo.bangboo_software_patch": "Bangboo Software Patch",
+  "item.bangboo.bangboo_algorithm_model": "Bangboo Algorithm Model",
+  "item.bangboo.bangboo_system_widget": "Bangboo System Widget",
+  "item.bangboo.supply_box_a": "Senior Investigator's Supply Box",
+  "item.bangboo.supply_box_b": "Elite Investigator's Supply Box",
+  "item.bangboo.ether": "Ether",
+  "item.bangboo.ether_ingot": "Ether Alloy",
   "item.bangboo.bangboo_core": "Blankboo Core",
   "item.bangboo.bangboo_core_eous": "Eous' Core",
   "item.bangboo.bangboo_core_safety": "Safety's Core",
@@ -39,5 +49,7 @@
   "entity.bangboo.bangboo_penguinboo": "Penguinboo",
   "entity.bangboo.bangboo_plugboo": "Plugboo",
   "entity.bangboo.bangboo_sumoboo": "Sumoboo",
-  "entity.bangboo.bangboo_exploreboo": "Exploreboo"
+  "entity.bangboo.bangboo_exploreboo": "Exploreboo",
+  "block.bangboo.ether_ore": "Ether Ore",
+  "block.bangboo.deepslate_ether_ore": "Deepslate Ether Ore"
 }

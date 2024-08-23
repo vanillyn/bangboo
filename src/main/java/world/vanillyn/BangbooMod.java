@@ -5,6 +5,7 @@ import net.fabricmc.api.ModInitializer;
 import net.minecraft.util.Identifier;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import world.vanillyn.block.BangbooBlocks;
 import world.vanillyn.data.items.RatingComponent;
 import world.vanillyn.entity.BangbooEntities;
 import world.vanillyn.items.BangbooItems;
@@ -21,7 +22,8 @@ public class BangbooMod implements ModInitializer {
 	public void onInitialize() {
 		LOGGER.info("Ehen nene nu-nah! (Bangboo mod initialized!)");
 		FieldRegistrationHandler.register(BangbooItems.class, MOD_ID, false);
-		BangbooEntities.initialize();
+        BangbooEntities.init();
+        BangbooBlocks.init();
 		RatingComponent.init();
 		SCREEN_CHANNEL.registerClientbound(ScreenChannel.ScreenPacket.class, (message, access) -> {
 

@@ -1,4 +1,9 @@
 package world.vanillyn.block.Block.Ore;
 
-public class Ether {
+import net.minecraft.block.Block;
+
+public class Ether extends Block {
+    public Ether(Settings settings) {
+        super(settings);
+    }
 }
