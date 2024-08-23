@@ -19,8 +19,7 @@ public class Sharkboo extends Bangboo {
 
     @Override
     protected void initGoals() {
-        // this.goalSelector.add(1, new MeowEntities.FollowPlayerGoal(this, 1.0D));
-
+        // eventually goals will go here
     }
 
     @Override

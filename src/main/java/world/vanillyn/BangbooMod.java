@@ -9,9 +9,9 @@ import world.vanillyn.block.BangbooBlocks;
 import world.vanillyn.data.items.RatingComponent;
 import world.vanillyn.entity.BangbooEntities;
 import world.vanillyn.items.BangbooItems;
-import world.vanillyn.net.ScreenChannel;
+import world.vanillyn.net.NetChannel;
 
-import static world.vanillyn.net.ScreenChannel.SCREEN_CHANNEL;
+import static world.vanillyn.net.NetChannel.SCREEN_CHANNEL;
 
 public class BangbooMod implements ModInitializer {
 	public static final String MOD_ID = "bangboo";
@@ -25,7 +25,7 @@ public class BangbooMod implements ModInitializer {
         BangbooEntities.init();
         BangbooBlocks.init();
 		RatingComponent.init();
-		SCREEN_CHANNEL.registerClientbound(ScreenChannel.ScreenPacket.class, (message, access) -> {
+		SCREEN_CHANNEL.registerClientbound(NetChannel.ScreenPacket.class, (message, access) -> {
 
 		});
 	}

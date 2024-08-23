@@ -1,5 +1,4 @@
 package world.vanillyn.screen;
 
-public interface ClientService {
-
+public class ScreenHandler {
 }

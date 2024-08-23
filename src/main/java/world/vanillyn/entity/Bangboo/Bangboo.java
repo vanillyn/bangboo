@@ -24,6 +24,7 @@ public class Bangboo extends TameableEntity {
     public String[] bangbooId = {"amillion", "avocaboo", "bagboo", "blankboo", "boolseye", "butler", "cryboo", "devilboo", "electroboo", "luckyboo", "magnetiboo", "officer_cui", "paperboo", "penguinboo", "plugboo", "safety", "sharkboo", "sumoboo"};
     public ActionResult handleInteractMob(PlayerEntity player, Hand hand, ItemStack itemStack) {
         if (!this.getWorld().isClient) {
+
             System.out.println("Interacted with " + this.getType().getName().getString());
         }
         return ActionResult.PASS;
