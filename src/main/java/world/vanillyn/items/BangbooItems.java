@@ -3,6 +3,8 @@ package world.vanillyn.items;
 
 import io.wispforest.owo.registration.reflect.ItemRegistryContainer;
 import net.minecraft.item.Item;
+import world.vanillyn.items.Item.BangbooCore;
+import world.vanillyn.items.Item.CoolingFluid;
 
 import static world.vanillyn.entity.BangbooEntities.*;
 

@@ -1,4 +1,4 @@
-package world.vanillyn.items;
+package world.vanillyn.items.Item;
 
 import net.minecraft.entity.EntityType;
 import net.minecraft.entity.passive.TameableEntity;

@@ -1,4 +1,4 @@
-package world.vanillyn.items;
+package world.vanillyn.items.Item;
 
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
