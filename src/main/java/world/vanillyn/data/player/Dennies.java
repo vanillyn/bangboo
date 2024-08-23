@@ -18,8 +18,6 @@ public class Dennies implements AutoSyncedComponent {
     public void readFromNbt(NbtCompound tag, RegistryWrapper.WrapperLookup registryLookup) {
         if (tag.contains("dennies")) {
             dennies = tag.getInt("dennies");
-        } else {
-            dennies = 0;
         }
     }
 
