@@ -14,8 +14,4 @@ public class SupplyBox extends Item {
         return super.useOnBlock(context);
     }
 
-    @Override
-    public ActionResult use() {
-
-    }
 }
