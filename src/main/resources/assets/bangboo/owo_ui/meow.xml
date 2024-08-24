@@ -3,21 +3,33 @@
     <components>
         <flow-layout direction="vertical">
             <children>
-                <flow-layout direction="horizontal">
+                <flow-layout direction="vertical">
                     <children>
-                        <button id="the-button">
-                            <text>A Button</text>
+                        <label id="atk">
+                            <text>atk meow</text>
+                        </label>
+                        <label id="cd">
+                            <text>cd meow</text>
+                        </label>
+                        <label id="hp">
+                            <text>hp woof</text>
+                        </label>
+                        <label id="def">
+                            <text>def meow</text>
+                        </label>
+                        <label id="lvl">
+                            <text> </text>
+                        </label>
+                        <button id="pickup">
+                            <text>pickup</text>
+                        </button>
+                        <button id="level up">
+                            <text>level up</text>
+                        </button>
+                        <button id="details">
+                            <text>details</text>
                         </button>
                     </children>
-                    <horizontal-alignment>center</horizontal-alignment>
-                    <vertical-alignment>center</vertical-alignment>
-                    <padding>
-                        <all>10</all>
-                    </padding>
-
-                    <surface>
-                        <panel dark="true"/>
-                    </surface>
                 </flow-layout>
             </children>
 

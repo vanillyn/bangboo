@@ -12,7 +12,10 @@ public class Handler {
 
     public static void handleEntityInteraction(PlayerEntity player, Entity entity) {
         if (player.isSneaking() && entity instanceof Bangboo) {
-            MinecraftClient.getInstance().setScreen(new TestScreen());
+            //lazy example of me sending data over. not pretty but it works!
+            EntityType<?> bangboo = entity.getType();
+            String bangbooName = bangboo.getName().getString();
+            MinecraftClient.getInstance().setScreen(new TestScreen(bangbooName));
         } else {
             EntityType<?> bangboo = entity.getType();
             String bangbooName = bangboo.getName().getString();
