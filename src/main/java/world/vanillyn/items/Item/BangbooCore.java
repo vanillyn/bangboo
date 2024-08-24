@@ -14,7 +14,7 @@ import net.minecraft.util.math.BlockPos;
 public class BangbooCore extends Item {
     private final EntityType<?> entityType;
 
-    public BangbooCore(Settings settings, EntityType<? extends TameableEntity> entityType, char rating) {
+    public BangbooCore(Settings settings, EntityType<?> entityType, char rating) {
         super(settings);
         this.entityType = entityType;
     }
