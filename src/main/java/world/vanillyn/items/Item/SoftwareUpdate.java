@@ -5,7 +5,7 @@ import net.minecraft.item.ItemStack;
 import world.vanillyn.data.items.RatingComponent;
 
 public class SoftwareUpdate extends Item {
-    public SoftwareUpdate(Settings settings) {
+    public SoftwareUpdate(Settings settings, char rating) {
         super(settings);
     }
 

@@ -5,7 +5,7 @@ import net.minecraft.item.ItemStack;
 import world.vanillyn.data.items.RatingComponent;
 
 public class CoolingFluid extends Item {
-    public CoolingFluid(Settings settings) {
+    public CoolingFluid(Settings settings, char rating) {
         super(settings);
     }
 

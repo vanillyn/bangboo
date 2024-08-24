@@ -9,7 +9,7 @@ import net.minecraft.util.TypedActionResult;
 import net.minecraft.world.World;
 
 public class SupplyBox extends Item {
-    public SupplyBox(Settings settings) {
+    public SupplyBox(Settings settings, char rating) {
         super(settings);
     }
 
