@@ -1,7 +1,6 @@
 package world.vanillyn.render.Screen.Entity;
 
 import net.minecraft.client.MinecraftClient;
-import net.minecraft.client.font.TextRenderer;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityType;
 import net.minecraft.entity.player.PlayerEntity;
@@ -13,9 +12,8 @@ public class Handler {
     public static void handleEntityInteraction(PlayerEntity player, Entity entity) {
         if (player.isSneaking() && entity instanceof Bangboo) {
             //lazy example of me sending data over. not pretty but it works!
-            EntityType<?> bangboo = entity.getType();
-            String bangbooName = bangboo.getName().getString();
-            MinecraftClient.getInstance().setScreen(new TestScreen(bangbooName));
+
+            MinecraftClient.getInstance().setScreen(new TestScreen(entity));
         } else {
             EntityType<?> bangboo = entity.getType();
             String bangbooName = bangboo.getName().getString();
