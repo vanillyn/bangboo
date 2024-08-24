@@ -8,10 +8,6 @@ import net.minecraft.entity.Entity;
 import net.minecraft.nbt.NbtCompound;
 import net.minecraft.text.Text;
 import world.vanillyn.BangbooMod;
-import world.vanillyn.data.BangbooData;
-import world.vanillyn.data.entity.Bangboo.BangbooComponents;
-
-import java.util.Optional;
 
 
 public class TestScreen extends BaseUIModelScreen<FlowLayout> {
@@ -34,7 +30,6 @@ Entity target;
             rootComponent.childById(LabelComponent.class, "atk").text(Text.of(targetName));
             var compound = new NbtCompound();
             target.saveSelfNbt(compound);
-            stack.set(BangbooData.ENTITY_STORAGE, new BangbooComponents(Optional.of(compound)));
         });
     }
 }
