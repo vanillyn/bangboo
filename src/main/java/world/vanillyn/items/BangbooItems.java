@@ -5,8 +5,6 @@ import io.wispforest.owo.registration.reflect.ItemRegistryContainer;
 import net.minecraft.item.Item;
 import world.vanillyn.items.Item.BangbooCore;
 import world.vanillyn.items.Item.CoolingFluid;
-import world.vanillyn.items.Item.Ether.Ether;
-import world.vanillyn.items.Item.Ether.EtherIngot;
 import world.vanillyn.items.Item.Signal.Boopon;
 import world.vanillyn.items.Item.SoftwareUpdate;
 import world.vanillyn.items.Item.SupplyBox;
@@ -51,10 +49,6 @@ public class BangbooItems implements ItemRegistryContainer {
     // Supply Box
     public static final Item SUPPLY_BOX_S = new SupplyBox(new Item.Settings().maxCount(1), 's');
     public static final Item SUPPLY_BOX_A = new SupplyBox(new Item.Settings().maxCount(1), 'a');
-
-    // Ether
-    public static final Item ETHER = new Ether(new Item.Settings().maxCount(1));
-    public static final Item ETHER_INGOT = new EtherIngot(new Item.Settings().maxCount(1));
 
     // Signal Search
     public static final Item BOOPON = new Boopon(new Item.Settings().maxCount(10));
