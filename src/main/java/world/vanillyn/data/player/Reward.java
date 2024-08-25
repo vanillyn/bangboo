@@ -25,7 +25,7 @@ public class Reward {
             int count = rewardItems.nextInt(maxItems - minItems) + minItems;
             ItemStack stack = new ItemStack(item, count);
 
-            if (crtReward) {
+            if (isCrtReward) {
                 ItemEntity drops = new ItemEntity(user.getWorld(), user.getX(), user.getY(), user.getZ(), stack);
                 user.getWorld().spawnEntity(drops);
             } else {
