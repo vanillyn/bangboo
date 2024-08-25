@@ -22,7 +22,12 @@ public class Reward {
         Random rewardItems = new Random();
         Random rewardDennies = new Random();
         for (Item item : rewards) {
-            int count = rewardItems.nextInt(maxItems - minItems) + minItems;
+            int count;
+            if (maxItems == 1) {
+                count = 1;
+            } else {
+                count = rewardItems.nextInt(maxItems - minItems) + minItems;
+            }
             ItemStack stack = new ItemStack(item, count);
 
             if (isCrtReward) {
