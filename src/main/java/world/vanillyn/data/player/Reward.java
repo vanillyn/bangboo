@@ -10,14 +10,15 @@ import java.util.Random;
 public class Reward {
     /**
      * @param user       The player entity.
-     * @param crtReward  CRT rewards drop the items on the ground, instead of placing them in your inventory.
+     * @param isCrtReward  CRT rewards drop the items on the ground, instead of placing them in your inventory.
+     * @param shouldRewardDennies Whether or not the item rewards Dennies.
      * @param rewards    A list of items for rewards.
      * @param minItems   The minimum amount of items to be rewarded.
      * @param maxItems   The maximum amount of items to be rewarded.
      * @param minDennies The minimum amount of Dtems to be rewarded
      * @param maxDennies The maximum amount of Dennies to be rewarded.
      */
-    public Reward(PlayerEntity user, boolean crtReward, Item[] rewards, int minItems, int maxItems, int minDennies, int maxDennies) {
+    public Reward(PlayerEntity user, boolean isCrtReward, boolean shouldRewardDennies, Item[] rewards, int minItems, int maxItems, int minDennies, int maxDennies) {
         Random rewardItems = new Random();
         Random rewardDennies = new Random();
         for (Item item : rewards) {

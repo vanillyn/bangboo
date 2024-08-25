@@ -20,15 +20,15 @@ public class SupplyBox extends Item {
 
     @Override
     public TypedActionResult<ItemStack> use(World world, PlayerEntity user, Hand hand) {
+        ItemStack box = user.getStackInHand(hand);
         if (rating == 's') {
-            new Reward(user, false, new Item[]{BANGBOO_ALGORITHM_MODEL, BANGBOO_SOFTWARE_PATCH, ETHER_ELECTROLYTE, ENERGY_TRANSFER_FLUID}, 10, 64, 5000, 50000);
+            new Reward(user, false, true, new Item[]{BANGBOO_ALGORITHM_MODEL, BANGBOO_SOFTWARE_PATCH, ETHER_ELECTROLYTE, ENERGY_TRANSFER_FLUID}, 10, 64, 5000, 50000);
         } else if (rating == 'a') {
-            new Reward(user, false, new Item[]{BANGBOO_SOFTWARE_PATCH, ETHER_ELECTROLYTE}, 5, 32, 500, 5000);
+            new Reward(user, false, true, new Item[]{BANGBOO_SOFTWARE_PATCH, ETHER_ELECTROLYTE}, 5, 32, 500, 5000);
         } else {
             user.sendMessage(Text.literal("Broken item."));
+            return TypedActionResult.fail(box);
         }
-        return TypedActionResult.consume(user.getStackInHand(hand));
+        return TypedActionResult.consume(box);
     }
-
-
 }
