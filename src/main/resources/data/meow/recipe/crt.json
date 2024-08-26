@@ -1,0 +1,27 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "III",
+    "CGC",
+    "IBI"
+  ],
+  "key": {
+    "I": {
+      "tag": "minecraft:iron"
+    },
+    "C": {
+      "tag": "minecraft:redstone_lamp"
+    },
+    "G": {
+      "tag": "minecraft:glass"
+    },
+    "B": {
+      "tag": "bangboo:boopon"
+    }
+  },
+  "result": {
+    "id": "bangboo:crt",
+    "count": 1
+  }
+}
+

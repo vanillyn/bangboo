@@ -1,21 +1,17 @@
 {
-  "type": "minecraft:crafting_shaped",
+  "type": "minecraft:crafting_shapeless",
   "pattern": [
-    "WWW",
-    "WR ",
-    "WWW"
+    "AA",
+    "AA"
   ],
   "key": {
-    "W": {
-      "tag": "minecraft:logs"
-    },
-    "R": {
-      "item": "minecraft:redstone"
+    "A": {
+      "tag": "bangboo:bangboo_software_patch"
     }
   },
   "result": {
-    "id": "tutorial:custom_item",
-    "count": 4
+    "id": "bangboo:bangboo_algorithm_model",
+    "count": 1
   }
 }
 

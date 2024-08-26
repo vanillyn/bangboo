@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "pattern": [
+    "AA",
+    "AA"
+  ],
+  "key": {
+    "A": {
+      "tag": "bangboo:bangboo_algorithm_model"
+    }
+  },
+  "result": {
+    "id": "bangboo:bangboo_system_widget",
+    "count": 1
+  }
+}
+

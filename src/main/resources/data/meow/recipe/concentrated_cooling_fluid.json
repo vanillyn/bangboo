@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "pattern": [
+    "AA",
+    "AA"
+  ],
+  "key": {
+    "A": {
+      "tag": "bangboo:energy_transfer_fluid"
+    }
+  },
+  "result": {
+    "id": "bangboo:concentrated_cooling_fluid",
+    "count": 1
+  }
+}
+

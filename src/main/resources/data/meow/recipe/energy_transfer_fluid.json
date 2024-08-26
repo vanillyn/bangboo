@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "pattern": [
+    "AA",
+    "AA"
+  ],
+  "key": {
+    "A": {
+      "tag": "bangboo:ether_electrolyte"
+    }
+  },
+  "result": {
+    "id": "bangboo:energy_transfer_fluid",
+    "count": 1
+  }
+}
+
