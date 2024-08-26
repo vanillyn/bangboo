@@ -4,7 +4,7 @@ import net.minecraft.entity.ItemEntity;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
-import world.vanillyn.data.BangbooData;
+import world.vanillyn.data.entity.BangbooEntityData;
 
 import java.util.Random;
 
@@ -24,7 +24,7 @@ public class Reward {
         Random rewardDennies = new Random();
         if (shouldRewardDennies) {
             int count = rewardDennies.nextInt(maxDennies - minDennies) + minDennies;
-            BangbooData.DENNIES.get(user).add(count);
+            BangbooEntityData.DENNIES.get(user).add(count);
         }
         for (Item item : rewards) {
             int count;
