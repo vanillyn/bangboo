@@ -11,7 +11,7 @@ public class Dennies implements AutoSyncedComponent {
 
     public Dennies(PlayerEntity player) {
         this.player = player;
-        this.dennies = 0;
+        this.dennies = dennies;
     }
 
     @Override
@@ -24,5 +24,15 @@ public class Dennies implements AutoSyncedComponent {
     @Override
     public void writeToNbt(NbtCompound tag, RegistryWrapper.WrapperLookup registryLookup) {
         tag.putInt("dennies", this.dennies);
+    }
+
+    public Dennies add(int reward) {
+        dennies += reward;
+        return this;
+    }
+
+    public Dennies remove(int cost) {
+        dennies -= cost;
+        return this;
     }
 }

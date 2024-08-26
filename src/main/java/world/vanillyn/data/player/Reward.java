@@ -4,6 +4,7 @@ import net.minecraft.entity.ItemEntity;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
+import world.vanillyn.data.BangbooData;
 
 import java.util.Random;
 
@@ -21,6 +22,10 @@ public class Reward {
     public Reward(PlayerEntity user, boolean isCrtReward, boolean shouldRewardDennies, Item[] rewards, int minItems, int maxItems, int minDennies, int maxDennies) {
         Random rewardItems = new Random();
         Random rewardDennies = new Random();
+        if (shouldRewardDennies) {
+            int count = rewardDennies.nextInt(maxDennies - minDennies) + minDennies;
+            BangbooData.DENNIES.get(user).add(count);
+        }
         for (Item item : rewards) {
             int count;
             if (maxItems == 1) {
