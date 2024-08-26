@@ -1,8 +1,6 @@
 package world.vanillyn.entity.Bangboo;
 
 import net.minecraft.entity.EntityType;
-import net.minecraft.entity.attribute.DefaultAttributeContainer;
-import net.minecraft.entity.attribute.EntityAttributes;
 import net.minecraft.entity.effect.StatusEffectInstance;
 import net.minecraft.entity.effect.StatusEffects;
 import net.minecraft.entity.passive.TameableEntity;
@@ -46,16 +44,8 @@ public class Eous extends Bangboo {
         return this.handleInteractMob(player, hand, new ItemStack(BangbooItems.BANGBOO_CORE_EOUS));
     }
 
-    public static DefaultAttributeContainer.Builder  createMobAttributes() {
-        return TameableEntity.createLivingAttributes()
-                .add(EntityAttributes.GENERIC_MAX_HEALTH, 20.0D)
-                .add(EntityAttributes.GENERIC_ATTACK_DAMAGE, 5.0D)
-                .add(EntityAttributes.GENERIC_MOVEMENT_SPEED, 0.8D)
-                .add(EntityAttributes.GENERIC_ARMOR, 4D)
-                .add(EntityAttributes.GENERIC_FOLLOW_RANGE, 35.00D);
-    }
 
-//    public static class HelpProxy extends Goal {
+    //    public static class HelpProxy extends Goal {
 //        private final Eous eous;
 //
 //        public HelpProxy(Eous eous) {

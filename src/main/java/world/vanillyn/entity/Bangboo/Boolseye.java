@@ -1,6 +1,8 @@
 package world.vanillyn.entity.Bangboo;
 
 import net.minecraft.entity.EntityType;
+import net.minecraft.entity.attribute.DefaultAttributeContainer;
+import net.minecraft.entity.attribute.EntityAttributes;
 import net.minecraft.entity.passive.TameableEntity;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.ItemStack;
@@ -26,6 +28,14 @@ public class Boolseye extends Bangboo {
         return this.handleInteractMob(player, hand, new ItemStack(BangbooItems.BANGBOO_CORE_BOOLSEYE)); // Replace with the specific item for each class
     }
 
+    public static DefaultAttributeContainer.Builder createMobAttributes() {
+        return TameableEntity.createLivingAttributes()
+                .add(EntityAttributes.GENERIC_MAX_HEALTH, 20.0D)
+                .add(EntityAttributes.GENERIC_ATTACK_DAMAGE, 7.0D)
+                .add(EntityAttributes.GENERIC_MOVEMENT_SPEED, 0.7D)
+                .add(EntityAttributes.GENERIC_ARMOR, 3D)
+                .add(EntityAttributes.GENERIC_FOLLOW_RANGE, 20D);
+    }
     public Identifier getBangbooTexture() {
         return BangbooMod.id("textures/entity/bangboo/boolseye/boolseye.png");
     }

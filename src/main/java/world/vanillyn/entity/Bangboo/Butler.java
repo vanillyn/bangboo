@@ -1,6 +1,8 @@
 package world.vanillyn.entity.Bangboo;
 
 import net.minecraft.entity.EntityType;
+import net.minecraft.entity.attribute.DefaultAttributeContainer;
+import net.minecraft.entity.attribute.EntityAttributes;
 import net.minecraft.entity.passive.TameableEntity;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.ItemStack;
@@ -25,6 +27,15 @@ public class Butler extends Bangboo {
     @Override
     public ActionResult interactMob(PlayerEntity player, Hand hand) {
         return this.handleInteractMob(player, hand, new ItemStack(BangbooItems.BANGBOO_CORE_BUTLER));
+    }
+
+    public static DefaultAttributeContainer.Builder createMobAttributes() {
+        return TameableEntity.createLivingAttributes()
+                .add(EntityAttributes.GENERIC_MAX_HEALTH, 30.0D)
+                .add(EntityAttributes.GENERIC_ATTACK_DAMAGE, 3.0D)
+                .add(EntityAttributes.GENERIC_MOVEMENT_SPEED, 0.9D)
+                .add(EntityAttributes.GENERIC_ARMOR, 1.2D)
+                .add(EntityAttributes.GENERIC_FOLLOW_RANGE, 40D);
     }
     public Identifier getBangbooTexture() {
         return BangbooMod.id("textures/entity/bangboo/butler/butler.png");
