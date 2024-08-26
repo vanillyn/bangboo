@@ -33,7 +33,7 @@ public class CraftingInterfaceRecipe implements Recipe<CraftingRecipeInput> {
 
     @Override
     public ItemStack craft(CraftingRecipeInput input, RegistryWrapper.WrapperLookup lookup) {
-
+        System.out.println(cost);
         return this.getResult(lookup).copy();
     }
 
