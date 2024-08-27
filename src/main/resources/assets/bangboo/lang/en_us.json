@@ -50,6 +50,8 @@
   "entity.bangboo.bangboo_plugboo": "Plugboo",
   "entity.bangboo.bangboo_sumoboo": "Sumoboo",
   "entity.bangboo.bangboo_exploreboo": "Exploreboo",
-  "block.bangboo.ether_ore": "Ether Ore",
-  "block.bangboo.deepslate_ether_ore": "Deepslate Ether Ore"
+  "death.attack.bangboo.ether": " was lost in the Hollow.",
+  "death.attack.bangboo.ether.block": " got too close to the Hollow.",
+  "death.attack.bangboo.ether.player": " was sent to the Hollow by "
+
 }
