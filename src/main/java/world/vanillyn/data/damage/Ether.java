@@ -5,11 +5,16 @@ import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.damage.DamageSource;
 import net.minecraft.entity.damage.DamageType;
 import net.minecraft.registry.entry.RegistryEntry;
+import net.minecraft.registry.tag.TagKey;
 import net.minecraft.text.Text;
 
 public class Ether extends DamageSource {
+    public final RegistryEntry<DamageType> type;
+    public final Entity attacker;
     public Ether(RegistryEntry<DamageType> type, Entity attacker) {
         super(type);
+        this.type = type;
+        this.attacker = attacker;
     }
 
     @Override
