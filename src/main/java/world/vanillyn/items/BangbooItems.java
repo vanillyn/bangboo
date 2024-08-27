@@ -35,7 +35,7 @@ public class BangbooItems implements ItemRegistryContainer {
     public static final Item BANGBOO_CORE_PLUGBOO = new BangbooCore(new Item.Settings().maxCount(1), BANGBOO_PLUGBOO, 'a');
     public static final Item BANGBOO_CORE_PENGUINBOO = new BangbooCore(new Item.Settings().maxCount(1), BANGBOO_PENGUINBOO, 'a');
     public static final Item BANGBOO_CORE_SUMOBOO = new BangbooCore(new Item.Settings().maxCount(1), BANGBOO_SUMOBOO, 'a');
-
+    public static final Item BANGBOO_CORE_BADDIEBOO = new BangbooCore(new Item.Settings().maxCount(1), BANGBOO_BADDIEBOO, 's');
     // Ether Electrolyte
     public static final Item ETHER_ELECTROLYTE = new CoolingFluid(new Item.Settings().maxCount(99), 'c');
     public static final Item ENERGY_TRANSFER_FLUID = new CoolingFluid(new Item.Settings().maxCount(99), 'b');

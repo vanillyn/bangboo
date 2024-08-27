@@ -8,8 +8,6 @@ import net.fabricmc.fabric.api.client.rendering.v1.EntityModelLayerRegistry;
 import net.fabricmc.fabric.api.client.rendering.v1.EntityRendererRegistry;
 import net.fabricmc.fabric.api.event.player.UseEntityCallback;
 import net.fabricmc.fabric.api.object.builder.v1.entity.FabricDefaultAttributeRegistry;
-import net.minecraft.client.MinecraftClient;
-import net.minecraft.client.font.TextRenderer;
 import net.minecraft.client.option.KeyBinding;
 import net.minecraft.client.render.entity.model.EntityModelLayer;
 import net.minecraft.client.util.InputUtil;
@@ -19,7 +17,6 @@ import world.vanillyn.entity.Bangboo.*;
 import world.vanillyn.render.Model.Bangboo.BangbooModel;
 import world.vanillyn.render.Renderer.BangbooRenderer;
 import world.vanillyn.render.Screen.Entity.Handler;
-import world.vanillyn.render.Screen.TestScreen;
 
 import static world.vanillyn.entity.BangbooEntities.*;
 
@@ -96,7 +93,8 @@ public class BangbooClient implements ClientModInitializer {
 
 		FabricDefaultAttributeRegistry.register(BANGBOO_SUMOBOO, Sumoboo.createMobAttributes());
 		EntityRendererRegistry.register(BANGBOO_SUMOBOO, BangbooRenderer::new);
-
+		FabricDefaultAttributeRegistry.register(BANGBOO_BADDIEBOO, Baddieboo.createMobAttributes());
+		EntityRendererRegistry.register(BANGBOO_BADDIEBOO, BangbooRenderer::new);
 		OpenMenu = KeyBindingHelper.registerKeyBinding(new KeyBinding(
 				"key.Bangoo.openscreen",
 				InputUtil.Type.KEYSYM,

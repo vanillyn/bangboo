@@ -156,7 +156,13 @@ public class BangbooEntities {
                     .dimensions(.6F, 1F)
                     .build("bangboo_sumoboo")
     );
-
+    public static final EntityType<Baddieboo> BANGBOO_BADDIEBOO = Registry.register(
+            Registries.ENTITY_TYPE,
+            BangbooMod.id("bangboo_baddieboo"),
+            EntityType.Builder.create(Baddieboo::new, SpawnGroup.MISC)
+                    .dimensions(.6F, 1F)
+                    .build("bangboo_baddieboo")
+    );
     public static class FollowPlayerGoal extends Goal {
         private final MobEntity entity;
         private PlayerEntity targetPlayer;
