@@ -96,10 +96,10 @@ public class BangbooClient implements ClientModInitializer {
 		FabricDefaultAttributeRegistry.register(BANGBOO_BADDIEBOO, Baddieboo.createMobAttributes());
 		EntityRendererRegistry.register(BANGBOO_BADDIEBOO, BangbooRenderer::new);
 		OpenMenu = KeyBindingHelper.registerKeyBinding(new KeyBinding(
-				"key.Bangoo.openscreen",
+				"key.Bangboo.openscreen",
 				InputUtil.Type.KEYSYM,
 				GLFW.GLFW_KEY_O,
-				"debugging.Bangoo"
+				"debugging.Bangboo"
 		));
 
 		UseEntityCallback.EVENT.register((player, world, hand, entity, hitResult) -> {
