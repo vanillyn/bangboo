@@ -7,9 +7,7 @@ import net.minecraft.entity.passive.TameableEntity;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.util.ActionResult;
 import net.minecraft.util.Hand;
-import net.minecraft.util.Identifier;
 import net.minecraft.world.World;
-import world.vanillyn.BangbooMod;
 
 
 public class Plugboo extends Bangboo {
@@ -35,8 +33,5 @@ public class Plugboo extends Bangboo {
                 .add(EntityAttributes.GENERIC_MOVEMENT_SPEED, 1D)
                 .add(EntityAttributes.GENERIC_ARMOR, 0.5D)
                 .add(EntityAttributes.GENERIC_FOLLOW_RANGE, 20D);
-    }
-    public Identifier getBangbooTexture() {
-        return BangbooMod.id("textures/entity/bangboo/plugboo/plugboo.png");
     }
 }

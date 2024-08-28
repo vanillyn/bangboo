@@ -7,9 +7,7 @@ import net.minecraft.entity.passive.TameableEntity;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.util.ActionResult;
 import net.minecraft.util.Hand;
-import net.minecraft.util.Identifier;
 import net.minecraft.world.World;
-import world.vanillyn.BangbooMod;
 
 
 public class Baddieboo extends Bangboo {
@@ -37,7 +35,4 @@ public class Baddieboo extends Bangboo {
         return ActionResult.SUCCESS;
     }
 
-    public Identifier getBangbooTexture() {
-        return BangbooMod.id("textures/entity/bangboo/baddieboo/baddieboo.png");
-    }
 }
