@@ -50,8 +50,8 @@
   "entity.bangboo.bangboo_plugboo": "Plugboo",
   "entity.bangboo.bangboo_sumoboo": "Sumoboo",
   "entity.bangboo.bangboo_exploreboo": "Exploreboo",
-  "death.attack.ether": " was lost in the Hollow.",
-  "death.attack.ether.block": " got too close to the Hollow.",
-  "death.attack.ether.player": " was sent to the Hollow by "
+  "death.attack.ether": "%s was lost in the Hollow.",
+  "death.attack.ether.block": "%s got too close to the Hollow.",
+  "death.attack.ether.player": "%s was sent to the Hollow by %s"
 
 }
