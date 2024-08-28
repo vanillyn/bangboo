@@ -1,4 +1,4 @@
-package world.vanillyn.entity.Bangboo;
+package world.vanillyn.entity.bangboo;
 
 import com.mojang.serialization.Lifecycle;
 import net.minecraft.entity.EntityType;
@@ -9,7 +9,7 @@ import net.minecraft.registry.RegistryKey;
 import net.minecraft.registry.SimpleRegistry;
 import net.minecraft.util.Identifier;
 import world.vanillyn.BangbooMod;
-import world.vanillyn.items.Item.BangbooCore;
+import world.vanillyn.item.BangbooCore;
 
 public record BangbooType<T extends Bangboo>(EntityType<T> entityType, BangbooCore<T> coreItem, Identifier texture, char rating) {
     public static final RegistryKey<Registry<BangbooType>> REGISTRY_KEY = RegistryKey.ofRegistry(BangbooMod.id("bangboo"));

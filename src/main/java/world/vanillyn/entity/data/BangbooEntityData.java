@@ -1,4 +1,4 @@
-package world.vanillyn.data.entity;
+package world.vanillyn.entity.data;
 
 import net.minecraft.component.ComponentType;
 import net.minecraft.registry.Registries;
@@ -9,8 +9,8 @@ import org.ladysnake.cca.api.v3.entity.EntityComponentFactoryRegistry;
 import org.ladysnake.cca.api.v3.entity.EntityComponentInitializer;
 import org.ladysnake.cca.api.v3.entity.RespawnCopyStrategy;
 import world.vanillyn.BangbooMod;
-import world.vanillyn.data.entity.Bangboo.BangbooComponents;
-import world.vanillyn.data.player.Dennies;
+import world.vanillyn.entity.data.bangboo.BangbooComponents;
+import world.vanillyn.entity.data.player.Dennies;
 
 import java.util.function.UnaryOperator;
 

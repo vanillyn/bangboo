@@ -1,4 +1,4 @@
-package world.vanillyn.data.entity.Bangboo;
+package world.vanillyn.entity.data.bangboo;
 
 import com.mojang.serialization.Codec;
 import com.mojang.serialization.codecs.RecordCodecBuilder;

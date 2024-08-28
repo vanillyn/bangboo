@@ -6,9 +6,9 @@ import net.minecraft.util.Identifier;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import world.vanillyn.block.BangbooBlocks;
-import world.vanillyn.data.items.RatingComponent;
+import world.vanillyn.item.data.RatingComponent;
 import world.vanillyn.entity.BangbooEntities;
-import world.vanillyn.items.BangbooItems;
+import world.vanillyn.item.BangbooItems;
 import world.vanillyn.net.NetChannel;
 
 import static world.vanillyn.net.NetChannel.SCREEN_CHANNEL;

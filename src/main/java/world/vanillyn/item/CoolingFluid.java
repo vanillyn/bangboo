@@ -1,8 +1,8 @@
-package world.vanillyn.items.Item;
+package world.vanillyn.item;
 
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
-import world.vanillyn.data.items.RatingComponent;
+import world.vanillyn.item.data.RatingComponent;
 
 public class CoolingFluid extends Item {
     public CoolingFluid(Settings settings, char rating) {

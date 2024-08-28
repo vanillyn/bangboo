@@ -21,7 +21,7 @@
 			"world.vanillyn.BangbooClient"
 		],
 		"cardinal-components": [
-			"world.vanillyn.data.entity.BangbooEntityData"
+          "world.vanillyn.entity.data.BangbooEntityData"
 		]
 	},
 	"custom": {

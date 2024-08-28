@@ -1,4 +1,4 @@
-package world.vanillyn.data.items;
+package world.vanillyn.item.data;
 
 
 import com.mojang.serialization.Codec;

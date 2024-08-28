@@ -13,12 +13,10 @@ import net.minecraft.client.render.entity.model.EntityModelLayer;
 import net.minecraft.client.util.InputUtil;
 import net.minecraft.util.ActionResult;
 import org.lwjgl.glfw.GLFW;
-import world.vanillyn.entity.Bangboo.*;
+import world.vanillyn.entity.bangboo.*;
 import world.vanillyn.render.Model.Bangboo.BangbooModel;
 import world.vanillyn.render.Renderer.BangbooRenderer;
 import world.vanillyn.render.Screen.Entity.Handler;
-
-import static world.vanillyn.entity.BangbooEntities.*;
 
 
 @Environment(EnvType.CLIENT)

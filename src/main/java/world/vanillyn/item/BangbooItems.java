@@ -1,11 +1,7 @@
-package world.vanillyn.items;
+package world.vanillyn.item;
 
 import io.wispforest.owo.registration.reflect.ItemRegistryContainer;
 import net.minecraft.item.Item;
-import world.vanillyn.items.Item.CoolingFluid;
-import world.vanillyn.items.Item.Signal.Boopon;
-import world.vanillyn.items.Item.SoftwareUpdate;
-import world.vanillyn.items.Item.SupplyBox;
 
 public class BangbooItems implements ItemRegistryContainer {
     // Ether Electrolyte

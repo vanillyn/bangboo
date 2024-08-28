@@ -1,10 +1,10 @@
-package world.vanillyn.data.player;
+package world.vanillyn.entity.data.player;
 
 import net.minecraft.entity.ItemEntity;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
-import world.vanillyn.data.entity.BangbooEntityData;
+import world.vanillyn.entity.data.BangbooEntityData;
 
 import java.util.Random;
 

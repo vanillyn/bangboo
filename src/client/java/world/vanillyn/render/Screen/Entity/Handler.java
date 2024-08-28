@@ -4,7 +4,7 @@ import net.minecraft.client.MinecraftClient;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityType;
 import net.minecraft.entity.player.PlayerEntity;
-import world.vanillyn.entity.Bangboo.Bangboo;
+import world.vanillyn.entity.bangboo.Bangboo;
 import world.vanillyn.render.Screen.TestScreen;
 
 public class Handler {

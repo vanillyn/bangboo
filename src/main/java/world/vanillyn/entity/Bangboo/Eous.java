@@ -1,9 +1,8 @@
-package world.vanillyn.entity.Bangboo;
+package world.vanillyn.entity.bangboo;
 
 import net.minecraft.entity.EntityType;
 import net.minecraft.entity.effect.StatusEffectInstance;
 import net.minecraft.entity.effect.StatusEffects;
-import net.minecraft.entity.passive.TameableEntity;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.ItemStack;
 import net.minecraft.text.Text;
@@ -12,7 +11,6 @@ import net.minecraft.util.Hand;
 import net.minecraft.util.Identifier;
 import net.minecraft.world.World;
 import world.vanillyn.BangbooMod;
-import world.vanillyn.items.BangbooItems;
 
 
 public class Eous extends Bangboo {
@@ -46,7 +44,8 @@ public class Eous extends Bangboo {
         } else {
             player.sendMessage(Text.literal("Ne-nu nana-noo! (Please wait a moment!)"));
         }
-        return this.handleInteractMob(player, hand, new ItemStack(type().coreItem()));
+        // return this.handleInteractMob(player, hand, new ItemStack(type().coreItem()));
+        return ActionResult.SUCCESS;
     }
 
 

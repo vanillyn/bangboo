@@ -1,4 +1,4 @@
-package world.vanillyn.entity.Bangboo;
+package world.vanillyn.entity.bangboo;
 
 import net.minecraft.entity.EntityType;
 import net.minecraft.entity.passive.TameableEntity;

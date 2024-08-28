@@ -1,4 +1,4 @@
-package world.vanillyn.data.player;
+package world.vanillyn.entity.data.player;
 
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.nbt.NbtCompound;

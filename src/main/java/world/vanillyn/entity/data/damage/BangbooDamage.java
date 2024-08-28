@@ -1,4 +1,4 @@
-package world.vanillyn.data.damage;
+package world.vanillyn.entity.data.damage;
 
 import net.minecraft.entity.damage.DamageSource;
 import net.minecraft.entity.damage.DamageType;

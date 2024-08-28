@@ -1,14 +1,14 @@
-package world.vanillyn.items.Item;
+package world.vanillyn.item;
 
 import net.minecraft.entity.EntityType;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemUsageContext;
 import net.minecraft.util.ActionResult;
 import world.vanillyn.BangbooMod;
-import world.vanillyn.data.entity.Bangboo.BangbooComponents;
-import world.vanillyn.data.entity.BangbooEntityData;
-import world.vanillyn.data.items.RatingComponent;
-import world.vanillyn.entity.Bangboo.Bangboo;
+import world.vanillyn.entity.data.bangboo.BangbooComponents;
+import world.vanillyn.entity.data.BangbooEntityData;
+import world.vanillyn.item.data.RatingComponent;
+import world.vanillyn.entity.bangboo.Bangboo;
 
 import java.util.Optional;
 

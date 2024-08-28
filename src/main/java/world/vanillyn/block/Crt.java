@@ -1,4 +1,4 @@
-package world.vanillyn.block.Block;
+package world.vanillyn.block;
 
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
@@ -10,11 +10,13 @@ import net.minecraft.util.ActionResult;
 import net.minecraft.util.hit.BlockHitResult;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
-import world.vanillyn.data.player.Reward;
+import world.vanillyn.entity.bangboo.Eous;
+import world.vanillyn.entity.data.player.Reward;
 
 import java.util.Random;
 
-import static world.vanillyn.items.BangbooItems.*;
+import static net.minecraft.item.Items.DIAMOND;
+import static world.vanillyn.item.BangbooItems.*;
 
 public class Crt extends Block {
     Item boopon;
@@ -39,11 +41,11 @@ public class Crt extends Block {
                     break;
                 case 2:
                     rating = 'a';
-                    new Reward(player, true, false, new Item[]{BANGBOO_CORE}, 1, 1, 0, 0);
+                    new Reward(player, true, false, new Item[]{DIAMOND}, 1, 1, 0, 0);
                     break;
                 case 3:
                     rating = 's';
-                    new Reward(player, true, false, new Item[]{BANGBOO_CORE}, 1, 1, 0, 0);
+                    new Reward(player, true, false, new Item[]{DIAMOND}, 1, 1, 0, 0);
                     break;
                 default:
                     rating = 'c';

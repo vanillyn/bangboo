@@ -1,4 +1,4 @@
-package world.vanillyn.entity.Bangboo;
+package world.vanillyn.entity.bangboo;
 
 import net.minecraft.entity.EntityType;
 import net.minecraft.entity.attribute.DefaultAttributeContainer;
@@ -11,7 +11,7 @@ import net.minecraft.util.Hand;
 import net.minecraft.util.Identifier;
 import net.minecraft.world.World;
 import world.vanillyn.BangbooMod;
-import world.vanillyn.items.BangbooItems;
+import world.vanillyn.item.BangbooItems;
 
 
 public class Amillion extends Bangboo {

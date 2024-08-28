@@ -1,4 +1,4 @@
-package world.vanillyn.block.Block;
+package world.vanillyn.block;
 
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
@@ -12,7 +12,7 @@ import net.minecraft.util.ActionResult;
 import net.minecraft.util.hit.BlockHitResult;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
-import world.vanillyn.data.damage.BangbooDamage;
+import world.vanillyn.entity.data.damage.BangbooDamage;
 
 public class SubHollow extends Block {
     public SubHollow(Settings settings) {

@@ -4,7 +4,7 @@ import net.minecraft.client.model.*;
 import net.minecraft.client.render.VertexConsumer;
 import net.minecraft.client.render.entity.model.EntityModel;
 import net.minecraft.client.util.math.MatrixStack;
-import world.vanillyn.entity.Bangboo.Bangboo;
+import world.vanillyn.entity.bangboo.Bangboo;
 
 
 

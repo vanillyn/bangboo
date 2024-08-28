@@ -1,4 +1,4 @@
-package world.vanillyn.items.Item.Signal;
+package world.vanillyn.item;
 
 import net.minecraft.item.Item;
 
