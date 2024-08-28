@@ -5,17 +5,13 @@ import net.fabricmc.api.EnvType;
 import net.fabricmc.api.Environment;
 import net.fabricmc.fabric.api.client.keybinding.v1.KeyBindingHelper;
 import net.fabricmc.fabric.api.client.rendering.v1.EntityModelLayerRegistry;
-import net.fabricmc.fabric.api.client.rendering.v1.EntityRendererRegistry;
 import net.fabricmc.fabric.api.event.player.UseEntityCallback;
-import net.fabricmc.fabric.api.object.builder.v1.entity.FabricDefaultAttributeRegistry;
 import net.minecraft.client.option.KeyBinding;
 import net.minecraft.client.render.entity.model.EntityModelLayer;
 import net.minecraft.client.util.InputUtil;
 import net.minecraft.util.ActionResult;
 import org.lwjgl.glfw.GLFW;
-import world.vanillyn.entity.bangboo.*;
 import world.vanillyn.render.Model.Bangboo.BangbooModel;
-import world.vanillyn.render.Renderer.BangbooRenderer;
 import world.vanillyn.render.Screen.Entity.Handler;
 
 
@@ -23,18 +19,13 @@ import world.vanillyn.render.Screen.Entity.Handler;
 public class BangbooClient implements ClientModInitializer {
 	public static final EntityModelLayer MODEL_BANGBOO_LAYER = new EntityModelLayer(BangbooMod.id("blankboo"), "main");
 
-	private static KeyBinding OpenMenu;
-
-	@Override
+    @Override
 	public void onInitializeClient() {
 
 
 		EntityModelLayerRegistry.registerModelLayer(MODEL_BANGBOO_LAYER, BangbooModel::getTexturedModelData);
 
-		FabricDefaultAttributeRegistry.register(BANGBOO_BLANKBOO, Bangboo.createMobAttributes());
-		EntityRendererRegistry.register(BANGBOO_BLANKBOO, BangbooRenderer::new);
-
-
+		/*
 		FabricDefaultAttributeRegistry.register(BANGBOO_EOUS, Eous.createMobAttributes());
 		EntityRendererRegistry.register(BANGBOO_EOUS, BangbooRenderer::new);
 
@@ -71,7 +62,7 @@ public class BangbooClient implements ClientModInitializer {
 		FabricDefaultAttributeRegistry.register(BANGBOO_CRYBOO, Cryboo.createMobAttributes());
 		EntityRendererRegistry.register(BANGBOO_CRYBOO, BangbooRenderer::new);
 
-		FabricDefaultAttributeRegistry.register(BANGBOO_BOOLSEYE, Boolseye.createMobAttributes());
+		FabricDefaultAttributeRegistry.register(BANGBOO_BOOLSEYE, Boollseye.createMobAttributes());
 		EntityRendererRegistry.register(BANGBOO_BOOLSEYE, BangbooRenderer::new);
 
 		FabricDefaultAttributeRegistry.register(BANGBOO_DEVILBOO, Devilboo.createMobAttributes());
@@ -93,12 +84,13 @@ public class BangbooClient implements ClientModInitializer {
 		EntityRendererRegistry.register(BANGBOO_SUMOBOO, BangbooRenderer::new);
 		FabricDefaultAttributeRegistry.register(BANGBOO_BADDIEBOO, Baddieboo.createMobAttributes());
 		EntityRendererRegistry.register(BANGBOO_BADDIEBOO, BangbooRenderer::new);
-		OpenMenu = KeyBindingHelper.registerKeyBinding(new KeyBinding(
-				"key.Bangboo.openscreen",
-				InputUtil.Type.KEYSYM,
-				GLFW.GLFW_KEY_O,
-				"debugging.Bangboo"
-		));
+		*/
+        KeyBinding openMenu = KeyBindingHelper.registerKeyBinding(new KeyBinding(
+                "key.Bangboo.openscreen",
+                InputUtil.Type.KEYSYM,
+                GLFW.GLFW_KEY_O,
+                "debugging.Bangboo"
+        ));
 
 		UseEntityCallback.EVENT.register((player, world, hand, entity, hitResult) -> {
 			if (world.isClient) {

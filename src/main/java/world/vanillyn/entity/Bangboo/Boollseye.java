@@ -5,27 +5,27 @@ import net.minecraft.entity.attribute.DefaultAttributeContainer;
 import net.minecraft.entity.attribute.EntityAttributes;
 import net.minecraft.entity.passive.TameableEntity;
 import net.minecraft.entity.player.PlayerEntity;
-import net.minecraft.item.ItemStack;
 import net.minecraft.util.ActionResult;
 import net.minecraft.util.Hand;
 import net.minecraft.util.Identifier;
 import net.minecraft.world.World;
 import world.vanillyn.BangbooMod;
-import world.vanillyn.item.BangbooItems;
 
 
-public class Boolseye extends Bangboo {
-    public Boolseye(EntityType<? extends TameableEntity> entityType, World world) {
+public class Boollseye extends Bangboo {
+    public Boollseye(EntityType<? extends Bangboo> entityType, World world) {
         super(entityType, world);
     }
 
+
     @Override
-    protected void initGoals() {
-        // this.goalSelector.add(1, new MeowEntities.FollowPlayerGoal(this, 1.0D)); // 1.0D is the speed; adjust as necessary
+    public BangbooType<?> type() {
+        return BangbooType.BOOLLSEYE;
     }
+
     @Override
     public ActionResult interactMob(PlayerEntity player, Hand hand) {
-        return this.handleInteractMob(player, hand, new ItemStack(BangbooItems.BANGBOO_CORE_BOOLSEYE)); // Replace with the specific item for each class
+        return ActionResult.SUCCESS;
     }
 
     public static DefaultAttributeContainer.Builder createMobAttributes() {
@@ -37,6 +37,6 @@ public class Boolseye extends Bangboo {
                 .add(EntityAttributes.GENERIC_FOLLOW_RANGE, 20D);
     }
     public Identifier getBangbooTexture() {
-        return BangbooMod.id("textures/entity/bangboo/boolseye/boolseye.png");
+        return BangbooMod.id("textures/entity/bangboo/boollseye/boollseye.png");
     }
 }

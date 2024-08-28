@@ -15,7 +15,25 @@ public record BangbooType<T extends Bangboo>(EntityType<T> entityType, BangbooCo
     public static final RegistryKey<Registry<BangbooType>> REGISTRY_KEY = RegistryKey.ofRegistry(BangbooMod.id("bangboo"));
     public static final Registry<BangbooType> REGISTRY = new SimpleRegistry<>(REGISTRY_KEY, Lifecycle.stable());
 
+    public static final BangbooType<Amillion> AMILLION = register("amillion", Amillion::new, 's');
+    public static final BangbooType<Avocaboo> AVOCABOO = register("avocaboo", Avocaboo::new, 's');
+    public static final BangbooType<Baddieboo> BADDIEBOO = register("baddieboo", Baddieboo::new, 's');
+    public static final BangbooType<Bagboo> BAGBOO = register("bagboo", Bagboo::new, 's');
+    public static final BangbooType<Boollseye> BOOLLSEYE = register("boollseye", Boollseye::new, 's');
+    public static final BangbooType<Butler> BUTLER = register("butler", Butler::new, 's');
+    public static final BangbooType<Cryboo> CRYBOO = register("cryboo", Cryboo::new, 's');
+    public static final BangbooType<Devilboo> DEVILBOO = register("devilboo", Devilboo::new, 's');
+    public static final BangbooType<Electroboo> ELECTROBOO = register("electroboo", Electroboo::new, 's');
     public static final BangbooType<Eous> EOUS = register("eous", Eous::new, 's');
+    public static final BangbooType<Exploreboo> EXPLOREBOO = register("exploreboo", Exploreboo::new, 's');
+    public static final BangbooType<Luckyboo> LUCKYBOO = register("luckyboo", Luckyboo::new, 's');
+    public static final BangbooType<Magnetiboo> MAGNETIBOO = register("magnetiboo", Magnetiboo::new, 's');
+    public static final BangbooType<OfficerCui> OFFICER_CUI = register("officer_cui", OfficerCui::new, 's');
+    public static final BangbooType<Paperboo> PAPERBOO = register("paperboo", Paperboo::new, 's');
+    public static final BangbooType<Penguinboo> PENGUINBOO = register("penguinboo", Penguinboo::new, 's');
+    public static final BangbooType<Plugboo> PLUGBOO = register("plugboo", Plugboo::new, 's');
+    public static final BangbooType<Safety> SAFETY = register("safety", Safety::new, 's');
+    public static final BangbooType<Sumoboo> SUMOBOO = register("sumoboo", Sumoboo::new, 's');
     public static final BangbooType<Sharkboo> SHARKBOO = register("sharkboo", Sharkboo::new, 's');
 
     public static <T extends Bangboo> BangbooType<T> register(String name, EntityType.EntityFactory<T> bangbooFactory, char rating) {
