@@ -15,6 +15,6 @@ public class BangbooRenderer extends MobEntityRenderer<Bangboo, BangbooModel> {
 
     @Override
     public Identifier getTexture(Bangboo entity) {
-        return entity.getBangbooTexture();
+        return entity.type().texture();
     }
 }

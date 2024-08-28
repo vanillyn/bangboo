@@ -16,12 +16,17 @@ import world.vanillyn.items.BangbooItems;
 
 
 public class Eous extends Bangboo {
-    public Eous(EntityType<? extends TameableEntity> entityType, World world) {
-        super(entityType, world);
-    }
     private long lastHelp = 0;
     private static final int HELP_COOLDOWN = 120000;
 
+    public Eous(EntityType<? extends Bangboo> entityType, World world) {
+        super(entityType, world);
+    }
+
+    @Override
+    public BangbooType<?> type() {
+        return BangbooType.EOUS;
+    }
 
 //    @Override
 //    protected void initGoals() {
@@ -41,7 +46,7 @@ public class Eous extends Bangboo {
         } else {
             player.sendMessage(Text.literal("Ne-nu nana-noo! (Please wait a moment!)"));
         }
-        return this.handleInteractMob(player, hand, new ItemStack(BangbooItems.BANGBOO_CORE_EOUS));
+        return this.handleInteractMob(player, hand, new ItemStack(type().coreItem()));
     }
 
 
