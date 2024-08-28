@@ -36,6 +36,8 @@ public record BangbooType<T extends Bangboo>(EntityType<T> entityType, BangbooCo
     public static final BangbooType<Sumoboo> SUMOBOO = register("sumoboo", Sumoboo::new, 's');
     public static final BangbooType<Sharkboo> SHARKBOO = register("sharkboo", Sharkboo::new, 's');
 
+    public static final BangbooType<Blankboo> BLANKBOO = register("blankboo", Blankboo::new, 's');
+
     public static <T extends Bangboo> BangbooType<T> register(String name, EntityType.EntityFactory<T> bangbooFactory, char rating) {
         var entityType = Registry.register(Registries.ENTITY_TYPE,
                 BangbooMod.id(name),

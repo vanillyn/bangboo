@@ -10,7 +10,6 @@ import net.minecraft.util.ActionResult;
 import net.minecraft.util.hit.BlockHitResult;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
-import world.vanillyn.entity.bangboo.Eous;
 import world.vanillyn.entity.data.player.Reward;
 
 import java.util.Random;
@@ -32,7 +31,7 @@ public class Crt extends Block {
         Random random = new Random();
         if (heldItem.getItem() == boopon) {
             char rating;
-            int reward = random.nextInt(3);
+            int reward = random.nextInt(4);
 
             switch (reward) {
                 case 1:
