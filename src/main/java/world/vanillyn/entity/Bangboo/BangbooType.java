@@ -45,6 +45,6 @@ public record BangbooType<T extends Bangboo>(EntityType<T> entityType, BangbooCo
         var coreItem = Registry.register(Registries.ITEM,
                 BangbooMod.id(name),
                 new BangbooCore<>(entityType, rating));
-        return Registry.register(REGISTRY, BangbooMod.id(name), new BangbooType<>(entityType, coreItem, BangbooMod.id("textures/entity/bangboo/%s.png".formatted(name)), rating));
+        return Registry.register(REGISTRY, BangbooMod.id(name), new BangbooType<>(entityType, coreItem, BangbooMod.id("textures/entity/bangboo/%s/%s.png".formatted(name, name)), rating));
     }
 }
