@@ -5,13 +5,18 @@ import net.fabricmc.api.EnvType;
 import net.fabricmc.api.Environment;
 import net.fabricmc.fabric.api.client.keybinding.v1.KeyBindingHelper;
 import net.fabricmc.fabric.api.client.rendering.v1.EntityModelLayerRegistry;
+import net.fabricmc.fabric.api.client.rendering.v1.EntityRendererRegistry;
 import net.fabricmc.fabric.api.event.player.UseEntityCallback;
+import net.fabricmc.fabric.api.object.builder.v1.entity.FabricDefaultAttributeRegistry;
 import net.minecraft.client.option.KeyBinding;
 import net.minecraft.client.render.entity.model.EntityModelLayer;
 import net.minecraft.client.util.InputUtil;
+import net.minecraft.server.network.ServerPlayerEntity;
 import net.minecraft.util.ActionResult;
 import org.lwjgl.glfw.GLFW;
+import world.vanillyn.entity.bangboo.*;
 import world.vanillyn.render.Model.Bangboo.BangbooModel;
+import world.vanillyn.render.Renderer.BangbooRenderer;
 import world.vanillyn.render.Screen.Entity.Handler;
 
 
@@ -25,66 +30,47 @@ public class BangbooClient implements ClientModInitializer {
 
 		EntityModelLayerRegistry.registerModelLayer(MODEL_BANGBOO_LAYER, BangbooModel::getTexturedModelData);
 
-		/*
-		FabricDefaultAttributeRegistry.register(BANGBOO_EOUS, Eous.createMobAttributes());
-		EntityRendererRegistry.register(BANGBOO_EOUS, BangbooRenderer::new);
+		EntityRendererRegistry.register(BangbooType.EOUS.entityType(), BangbooRenderer::new);
+		FabricDefaultAttributeRegistry.register(BangbooType.EOUS.entityType(), Eous.createMobAttributes());
+		EntityRendererRegistry.register(BangbooType.BAGBOO.entityType(), BangbooRenderer::new);
+		FabricDefaultAttributeRegistry.register(BangbooType.BAGBOO.entityType(), Bagboo.createMobAttributes());
+		EntityRendererRegistry.register(BangbooType.SHARKBOO.entityType(), BangbooRenderer::new);
+		FabricDefaultAttributeRegistry.register(BangbooType.SHARKBOO.entityType(), Sharkboo.createMobAttributes());
+		EntityRendererRegistry.register(BangbooType.EXPLOREBOO.entityType(), BangbooRenderer::new);
+		FabricDefaultAttributeRegistry.register(BangbooType.EXPLOREBOO.entityType(), Exploreboo.createMobAttributes());
+		EntityRendererRegistry.register(BangbooType.AMILLION.entityType(), BangbooRenderer::new);
+		FabricDefaultAttributeRegistry.register(BangbooType.AMILLION.entityType(), Amillion.createMobAttributes());
+		EntityRendererRegistry.register(BangbooType.MAGNETIBOO.entityType(), BangbooRenderer::new);
+		FabricDefaultAttributeRegistry.register(BangbooType.MAGNETIBOO.entityType(), Magnetiboo.createMobAttributes());
+		EntityRendererRegistry.register(BangbooType.LUCKYBOO.entityType(), BangbooRenderer::new);
+		FabricDefaultAttributeRegistry.register(BangbooType.LUCKYBOO.entityType(), Luckyboo.createMobAttributes());
+		EntityRendererRegistry.register(BangbooType.BUTLER.entityType(), BangbooRenderer::new);
+		FabricDefaultAttributeRegistry.register(BangbooType.BUTLER.entityType(), Butler.createMobAttributes());
+		EntityRendererRegistry.register(BangbooType.SAFETY.entityType(), BangbooRenderer::new);
+		FabricDefaultAttributeRegistry.register(BangbooType.SAFETY.entityType(), Safety.createMobAttributes());
+		EntityRendererRegistry.register(BangbooType.OFFICER_CUI.entityType(), BangbooRenderer::new);
+		FabricDefaultAttributeRegistry.register(BangbooType.OFFICER_CUI.entityType(), OfficerCui.createMobAttributes());
+		EntityRendererRegistry.register(BangbooType.AVOCABOO.entityType(), BangbooRenderer::new);
+		FabricDefaultAttributeRegistry.register(BangbooType.AVOCABOO.entityType(), Avocaboo.createMobAttributes());
+		EntityRendererRegistry.register(BangbooType.CRYBOO.entityType(), BangbooRenderer::new);
+		FabricDefaultAttributeRegistry.register(BangbooType.CRYBOO.entityType(), Cryboo.createMobAttributes());
+		EntityRendererRegistry.register(BangbooType.BOOLLSEYE.entityType(), BangbooRenderer::new);
+		FabricDefaultAttributeRegistry.register(BangbooType.BOOLLSEYE.entityType(), Boollseye.createMobAttributes());
+		EntityRendererRegistry.register(BangbooType.DEVILBOO.entityType(), BangbooRenderer::new);
+		FabricDefaultAttributeRegistry.register(BangbooType.DEVILBOO.entityType(), Devilboo.createMobAttributes());
+		EntityRendererRegistry.register(BangbooType.ELECTROBOO.entityType(), BangbooRenderer::new);
+		FabricDefaultAttributeRegistry.register(BangbooType.ELECTROBOO.entityType(), Electroboo.createMobAttributes());
+		EntityRendererRegistry.register(BangbooType.PAPERBOO.entityType(), BangbooRenderer::new);
+		FabricDefaultAttributeRegistry.register(BangbooType.PAPERBOO.entityType(), Paperboo.createMobAttributes());
+		EntityRendererRegistry.register(BangbooType.PENGUINBOO.entityType(), BangbooRenderer::new);
+		FabricDefaultAttributeRegistry.register(BangbooType.PENGUINBOO.entityType(), Penguinboo.createMobAttributes());
+		EntityRendererRegistry.register(BangbooType.PLUGBOO.entityType(), BangbooRenderer::new);
+		FabricDefaultAttributeRegistry.register(BangbooType.PLUGBOO.entityType(), Plugboo.createMobAttributes());
+		EntityRendererRegistry.register(BangbooType.SUMOBOO.entityType(), BangbooRenderer::new);
+		FabricDefaultAttributeRegistry.register(BangbooType.SUMOBOO.entityType(), Sumoboo.createMobAttributes());
+		EntityRendererRegistry.register(BangbooType.BADDIEBOO.entityType(), BangbooRenderer::new);
+		FabricDefaultAttributeRegistry.register(BangbooType.BADDIEBOO.entityType(), Baddieboo.createMobAttributes());
 
-		FabricDefaultAttributeRegistry.register(BANGBOO_BAGBOO, Bagboo.createMobAttributes());
-		EntityRendererRegistry.register(BANGBOO_BAGBOO, BangbooRenderer::new);
-
-		FabricDefaultAttributeRegistry.register(BANGBOO_SHARKBOO, Sharkboo.createMobAttributes());
-		EntityRendererRegistry.register(BANGBOO_SHARKBOO, BangbooRenderer::new);
-
-		FabricDefaultAttributeRegistry.register(BANGBOO_EXPLOREBOO, Exploreboo.createMobAttributes());
-		EntityRendererRegistry.register(BANGBOO_EXPLOREBOO, BangbooRenderer::new);
-
-		FabricDefaultAttributeRegistry.register(BANGBOO_AMILLION, Amillion.createMobAttributes());
-		EntityRendererRegistry.register(BANGBOO_AMILLION, BangbooRenderer::new);
-
-		FabricDefaultAttributeRegistry.register(BANGBOO_MAGNETIBOO, Magnetiboo.createMobAttributes());
-		EntityRendererRegistry.register(BANGBOO_MAGNETIBOO, BangbooRenderer::new);
-
-		FabricDefaultAttributeRegistry.register(BANGBOO_LUCKYBOO, Luckyboo.createMobAttributes());
-		EntityRendererRegistry.register(BANGBOO_LUCKYBOO, BangbooRenderer::new);
-
-		FabricDefaultAttributeRegistry.register(BANGBOO_BUTLER, Butler.createMobAttributes());
-		EntityRendererRegistry.register(BANGBOO_BUTLER, BangbooRenderer::new);
-
-		FabricDefaultAttributeRegistry.register(BANGBOO_SAFETY, Safety.createMobAttributes());
-		EntityRendererRegistry.register(BANGBOO_SAFETY, BangbooRenderer::new);
-
-		FabricDefaultAttributeRegistry.register(BANGBOO_OFFICER_CUI, OfficerCui.createMobAttributes());
-		EntityRendererRegistry.register(BANGBOO_OFFICER_CUI, BangbooRenderer::new);
-
-		FabricDefaultAttributeRegistry.register(BANGBOO_AVOCABOO, Avocaboo.createMobAttributes());
-		EntityRendererRegistry.register(BANGBOO_AVOCABOO, BangbooRenderer::new);
-
-		FabricDefaultAttributeRegistry.register(BANGBOO_CRYBOO, Cryboo.createMobAttributes());
-		EntityRendererRegistry.register(BANGBOO_CRYBOO, BangbooRenderer::new);
-
-		FabricDefaultAttributeRegistry.register(BANGBOO_BOOLSEYE, Boollseye.createMobAttributes());
-		EntityRendererRegistry.register(BANGBOO_BOOLSEYE, BangbooRenderer::new);
-
-		FabricDefaultAttributeRegistry.register(BANGBOO_DEVILBOO, Devilboo.createMobAttributes());
-		EntityRendererRegistry.register(BANGBOO_DEVILBOO, BangbooRenderer::new);
-
-		FabricDefaultAttributeRegistry.register(BANGBOO_ELECTROBOO, Electroboo.createMobAttributes());
-		EntityRendererRegistry.register(BANGBOO_ELECTROBOO, BangbooRenderer::new);
-
-		FabricDefaultAttributeRegistry.register(BANGBOO_PAPERBOO, Paperboo.createMobAttributes());
-		EntityRendererRegistry.register(BANGBOO_PAPERBOO, BangbooRenderer::new);
-
-		FabricDefaultAttributeRegistry.register(BANGBOO_PENGUINBOO, Penguinboo.createMobAttributes());
-		EntityRendererRegistry.register(BANGBOO_PENGUINBOO, BangbooRenderer::new);
-
-		FabricDefaultAttributeRegistry.register(BANGBOO_PLUGBOO, Plugboo.createMobAttributes());
-		EntityRendererRegistry.register(BANGBOO_PLUGBOO, BangbooRenderer::new);
-
-		FabricDefaultAttributeRegistry.register(BANGBOO_SUMOBOO, Sumoboo.createMobAttributes());
-		EntityRendererRegistry.register(BANGBOO_SUMOBOO, BangbooRenderer::new);
-		FabricDefaultAttributeRegistry.register(BANGBOO_BADDIEBOO, Baddieboo.createMobAttributes());
-		EntityRendererRegistry.register(BANGBOO_BADDIEBOO, BangbooRenderer::new);
-		*/
         KeyBinding openMenu = KeyBindingHelper.registerKeyBinding(new KeyBinding(
                 "key.Bangboo.openscreen",
                 InputUtil.Type.KEYSYM,
@@ -94,7 +80,7 @@ public class BangbooClient implements ClientModInitializer {
 
 		UseEntityCallback.EVENT.register((player, world, hand, entity, hitResult) -> {
 			if (world.isClient) {
-				Handler.handleEntityInteraction(player, entity);
+				Handler.handleEntityInteraction(player, (Bangboo) entity);
 			}
 			return ActionResult.PASS;
 		});

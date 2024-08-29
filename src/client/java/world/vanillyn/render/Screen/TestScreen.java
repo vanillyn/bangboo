@@ -5,31 +5,45 @@ import io.wispforest.owo.ui.component.ButtonComponent;
 import io.wispforest.owo.ui.component.LabelComponent;
 import io.wispforest.owo.ui.container.FlowLayout;
 import net.minecraft.entity.Entity;
+import net.minecraft.entity.ItemEntity;
+import net.minecraft.entity.player.PlayerEntity;
+import net.minecraft.item.Item;
+import net.minecraft.item.ItemStack;
 import net.minecraft.nbt.NbtCompound;
+import net.minecraft.server.network.ServerPlayerEntity;
 import net.minecraft.text.Text;
 import world.vanillyn.BangbooMod;
+import world.vanillyn.entity.bangboo.Bangboo;
+import world.vanillyn.entity.data.BangbooEntityData;
+import world.vanillyn.entity.data.bangboo.BangbooComponents;
+import world.vanillyn.net.BangbooChannel;
+
+import java.util.Optional;
 
 
 public class TestScreen extends BaseUIModelScreen<FlowLayout> {
-//predefine name out of the scope of the function
-Entity target;
-    String targetName;
-    public TestScreen(Entity bangboo) {
+
+    Bangboo bangboo;
+    String bangbooName;
+    Item core;
+    PlayerEntity player;
+
+    public TestScreen(Bangboo bangboo, PlayerEntity player) {
 
         super(FlowLayout.class, DataSource.asset(BangbooMod.id("meow")));
-        //after the super function was made we can easily overwrite the function outside with the data we moved with it, in this example i wrote the name of the entity! but it could be rly anything.
-        target = bangboo;
-        targetName = bangboo.getType().getName().getString();
-
+        this.bangboo = bangboo;
+        this.bangbooName = bangboo.getType().getName().getString();
+        this.core = bangboo.type().coreItem();
+        this.player = player;
     }
 
     //this is another example on how to read buttons and write stuff into the text! the id's come from the xml
     @Override
     protected void build(FlowLayout rootComponent) {
         rootComponent.childById(ButtonComponent.class, "pickup").onPress(button -> {
-            rootComponent.childById(LabelComponent.class, "atk").text(Text.of(targetName));
-            var compound = new NbtCompound();
-            target.saveSelfNbt(compound);
+            BangbooChannel.SCREEN_CHANNEL.clientHandle().send(new BangbooChannel.DropBangboo(bangboo.getUuid()));
+            close();
         });
+        rootComponent.childById(LabelComponent.class, "hp").text(Text.of(String.valueOf(bangboo.getMaxHealth())));
     }
 }

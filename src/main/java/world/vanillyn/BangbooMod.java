@@ -6,12 +6,13 @@ import net.minecraft.util.Identifier;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import world.vanillyn.block.BangbooBlocks;
+import world.vanillyn.entity.bangboo.Bangboo;
 import world.vanillyn.item.data.RatingComponent;
 import world.vanillyn.entity.BangbooEntities;
 import world.vanillyn.item.BangbooItems;
-import world.vanillyn.net.NetChannel;
+import world.vanillyn.net.BangbooChannel;
 
-import static world.vanillyn.net.NetChannel.SCREEN_CHANNEL;
+import static world.vanillyn.net.BangbooChannel.SCREEN_CHANNEL;
 
 public class BangbooMod implements ModInitializer {
 	public static final String MOD_ID = "bangboo";
@@ -25,8 +26,8 @@ public class BangbooMod implements ModInitializer {
         BangbooEntities.init();
         BangbooBlocks.init();
 		RatingComponent.init();
-		SCREEN_CHANNEL.registerClientbound(NetChannel.ScreenPacket.class, (message, access) -> {
-
+		SCREEN_CHANNEL.registerServerbound(BangbooChannel.DropBangboo.class, (message, access) -> {
+				Bangboo.dropBangbooAsItem(access.player().getServerWorld(), message.id());
 		});
 	}
 	public static Identifier id(String path) {

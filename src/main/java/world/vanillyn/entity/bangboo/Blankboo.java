@@ -11,8 +11,7 @@ public class Blankboo extends Bangboo {
 
     @Override
     public BangbooType<?> type() {
-        return null;
-        //TODO implement Blankboo
+        return BangbooType.BLANKBOO;
     }
 
 }

@@ -49,7 +49,7 @@ public class BangbooCore<T extends Bangboo> extends Item {
                 BangbooMod.LOGGER.warn("Failed to read entity from offhand due to invalid NBT, entity storage component has been cleared");
                 return ActionResult.FAIL;
             }
-
+            stack.decrement(1);
             return ActionResult.SUCCESS;
         }
 

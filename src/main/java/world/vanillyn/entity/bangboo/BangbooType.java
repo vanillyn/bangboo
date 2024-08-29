@@ -1,6 +1,7 @@
 package world.vanillyn.entity.bangboo;
 
 import com.mojang.serialization.Lifecycle;
+import net.fabricmc.fabric.api.object.builder.v1.entity.FabricDefaultAttributeRegistry;
 import net.minecraft.entity.EntityType;
 import net.minecraft.entity.SpawnGroup;
 import net.minecraft.registry.Registries;
@@ -40,12 +41,12 @@ public record BangbooType<T extends Bangboo>(EntityType<T> entityType, BangbooCo
 
     public static <T extends Bangboo> BangbooType<T> register(String name, EntityType.EntityFactory<T> bangbooFactory, char rating) {
         var entityType = Registry.register(Registries.ENTITY_TYPE,
-                BangbooMod.id(name),
+                BangbooMod.id("bangboo_" + name),
                 EntityType.Builder.create(bangbooFactory, SpawnGroup.MISC)
                         .dimensions(.6F, 1F)
                         .build(name));
         var coreItem = Registry.register(Registries.ITEM,
-                BangbooMod.id(name),
+                BangbooMod.id("bangboo_core_" + name),
                 new BangbooCore<>(entityType, rating));
 
         return Registry.register(REGISTRY,

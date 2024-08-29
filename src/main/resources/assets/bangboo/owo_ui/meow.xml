@@ -5,30 +5,21 @@
             <children>
                 <flow-layout direction="vertical">
                     <children>
-                        <label id="atk">
-                            <text>atk meow</text>
-                        </label>
-                        <label id="cd">
-                            <text>cd meow</text>
-                        </label>
-                        <label id="hp">
-                            <text>hp woof</text>
-                        </label>
-                        <label id="def">
-                            <text>def meow</text>
-                        </label>
-                        <label id="lvl">
-                            <text> </text>
-                        </label>
-                        <button id="pickup">
-                            <text>pickup</text>
-                        </button>
-                        <button id="level up">
-                            <text>level up</text>
-                        </button>
-                        <button id="details">
-                            <text>details</text>
-                        </button>
+                            <label id="atk"/>
+                            <label id="cd"/>
+                            <label id="hp"/>
+                            <label id="def"/>
+                            <label id="lvl"/>
+                            <button id="pickup">
+                                <text>Extract</text>
+                            </button>
+                            <button id="level up">
+                                <text>level up</text>
+                            </button>
+                            <button id="details">
+                                <text>details</text>
+                            </button>
+
                     </children>
                 </flow-layout>
             </children>
@@ -36,7 +27,7 @@
             <vertical-alignment>center</vertical-alignment>
             <horizontal-alignment>center</horizontal-alignment>
             <surface>
-                <vanilla-translucent/>
+                <panel/>
             </surface>
         </flow-layout>
     </components>
