@@ -1,4 +1,4 @@
-package world.vanillyn.render.Model.Bangboo;
+package world.vanillyn.render.model;
 
 import net.minecraft.client.model.*;
 import net.minecraft.client.render.VertexConsumer;

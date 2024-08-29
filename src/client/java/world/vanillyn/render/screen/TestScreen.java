@@ -1,4 +1,4 @@
-package world.vanillyn.render.Screen;
+package world.vanillyn.render.screen;
 
 import io.wispforest.owo.ui.base.BaseUIModelScreen;
 import io.wispforest.owo.ui.component.ButtonComponent;

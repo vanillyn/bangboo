@@ -1,4 +1,4 @@
-package world.vanillyn.render.Screen.Bangboo;
+package world.vanillyn.render.screen.bangboo;
 
 import io.wispforest.owo.ui.base.BaseUIModelScreen;
 import io.wispforest.owo.ui.component.ButtonComponent;
