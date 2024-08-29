@@ -1,10 +1,7 @@
 package world.vanillyn.render.Screen.Entity;
 
 import net.minecraft.client.MinecraftClient;
-import net.minecraft.entity.Entity;
-import net.minecraft.entity.EntityType;
 import net.minecraft.entity.player.PlayerEntity;
-import net.minecraft.server.network.ServerPlayerEntity;
 import world.vanillyn.BangbooMod;
 import world.vanillyn.entity.bangboo.Bangboo;
 import world.vanillyn.render.Screen.TestScreen;

@@ -4,21 +4,12 @@ import io.wispforest.owo.ui.base.BaseUIModelScreen;
 import io.wispforest.owo.ui.component.ButtonComponent;
 import io.wispforest.owo.ui.component.LabelComponent;
 import io.wispforest.owo.ui.container.FlowLayout;
-import net.minecraft.entity.Entity;
-import net.minecraft.entity.ItemEntity;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.Item;
-import net.minecraft.item.ItemStack;
-import net.minecraft.nbt.NbtCompound;
-import net.minecraft.server.network.ServerPlayerEntity;
 import net.minecraft.text.Text;
 import world.vanillyn.BangbooMod;
 import world.vanillyn.entity.bangboo.Bangboo;
-import world.vanillyn.entity.data.BangbooEntityData;
-import world.vanillyn.entity.data.bangboo.BangbooComponents;
 import world.vanillyn.net.BangbooChannel;
-
-import java.util.Optional;
 
 
 public class TestScreen extends BaseUIModelScreen<FlowLayout> {

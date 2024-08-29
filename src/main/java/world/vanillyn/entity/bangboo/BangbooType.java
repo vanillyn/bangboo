@@ -1,7 +1,6 @@
 package world.vanillyn.entity.bangboo;
 
 import com.mojang.serialization.Lifecycle;
-import net.fabricmc.fabric.api.object.builder.v1.entity.FabricDefaultAttributeRegistry;
 import net.minecraft.entity.EntityType;
 import net.minecraft.entity.SpawnGroup;
 import net.minecraft.registry.Registries;
