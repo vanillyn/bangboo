@@ -1,1 +1,1 @@
-[![](assets/github/landing.png)](https://sketchfab.com/Variell)
+[![](assets/github/readme/landing.png)](https://sketchfab.com/Variell)
